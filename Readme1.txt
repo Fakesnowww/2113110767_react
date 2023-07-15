@@ -1,4 +1,4 @@
 StudentID:2113110767
 StudentName:Boonyasith sawangroj
-DatetoStudy:24-jun-2023
-ClassTopic:Basic JavaScript part 1
+DatetoStudy:15-jul-2023
+ClassTopic:Basic React Native Component, Part II
