@@ -5,7 +5,7 @@ const MyCustomTextWith = ({ fname, lname }) => {
   return (
     <View>
       <Text>{"\n"}</Text>
-      <Text></Text>
+      <Text>
         Your First Name is {fname}! and Last name is {lname}
       </Text>
     </View>
