@@ -7,6 +7,7 @@ import Counter from "./Counter";
 import Myinput from "./Myinput";
 import IncrementCounter from "./incrementCounter";
 import Form from "./Form";
+import Login from "./Login";
 
 export default function App() {
   return (
@@ -18,7 +19,8 @@ export default function App() {
       {/* <Counter /> */}
       {/* <Myinput/> */}
       {/* <Form/> */}
-      <IncrementCounter/>
+      {/* <IncrementCounter/> */}
+      <Login/>
     </View>
   );
 }
