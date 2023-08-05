@@ -8,6 +8,7 @@ import Myinput from "./Myinput";
 import IncrementCounter from "./incrementCounter";
 import Form from "./Form";
 import Login from "./Login";
+import TouchablePractice from "./TouchablePractice";
 
 export default function App() {
   return (
@@ -20,7 +21,8 @@ export default function App() {
       {/* <Myinput/> */}
       {/* <Form/> */}
       {/* <IncrementCounter/> */}
-      <Login/>
+      {/* <Login/> */}
+      <TouchablePractice/>
     </View>
   );
 }
