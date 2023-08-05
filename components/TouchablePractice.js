@@ -25,7 +25,7 @@ const TouchablePractice = () => {
         </TouchableOpacity>
       </View>
     </SafeAreaView>
-  );
+  );//ss
 };
 
 export default TouchablePractice;

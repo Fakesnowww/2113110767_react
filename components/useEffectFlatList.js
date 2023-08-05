@@ -16,7 +16,7 @@ const UseEffectFlatList = () => {
         console.error("Error fetching data:", error);
         setIsLoading(false);
       });
-  }, []); //The empty dependency array ensures this effect run only once when the component mounts
+  }, []); //The empty dependency array ensures this effect run only once when the component mountss
   if (isloading) {
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
