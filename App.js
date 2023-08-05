@@ -1,11 +1,18 @@
+
 import { StyleSheet, Text, View } from "react-native";
 import React  from "react";
-import TouchablePractice from "./TouchablePractice";
+import UseEffectFlatList from "./components/useEffectFlatList";
+// import TouchablePractice from "./TouchablePractice";
+// import Example_useEffect from "./components/Example_useEffect";
+
+
 
 const App =() =>{
   return(
     <View style={{flex:1 }}>
-      <TouchablePractice/>
+      {/* // <TouchablePractice/> */}
+      {/* <Example_useEffect/> */}
+      <UseEffectFlatList/>
     </View>
   )
 }
@@ -20,3 +27,4 @@ const styles = StyleSheet.create({
     alignItems:'center'
   }
 })
+
