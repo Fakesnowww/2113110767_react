@@ -7,7 +7,7 @@ import RandomUsersScreen from "./components/RandomUsersScreen";
 export default function App() {
   return (
     <View style={styles.container}>
-      {/* <DefineStyle/> */}
+      {/* <DefineStyle/> */}/
       <RandomUsersScreen/>
     </View>
   );
