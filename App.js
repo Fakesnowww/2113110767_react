@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 
 import FlastListAPI from "./components/FlastListAPI";
 import News from "./components/News";
+import ProductScreen from "./components/ProductScreen";
 
 
 export default function App() {
@@ -13,7 +14,8 @@ export default function App() {
       {/* <FlatList_Example1/> */}
       {/* <FlatList_HeaderFooter/> */}
       {/* <FlastListAPI/> */}
-      <News/>
+      {/* <News/> */}
+      <ProductScreen/>
     </View>
   );
 }
