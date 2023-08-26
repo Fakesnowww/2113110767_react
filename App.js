@@ -1,18 +1,19 @@
 import { StyleSheet, Text, View } from "react-native";
 // import Recap from "./components/Recap";
-import DefineStyle from "./components/DefineStyle";
-import RandomUsersScreen from "./components/RandomUsersScreen";
-import FlatList_Example1 from "./components/FlatList_Example1";
-import FlatList_HeaderFooter from "./FlatList_HeaderFooter";
+
+import FlastListAPI from "./components/FlastListAPI";
+import News from "./components/News";
 
 
 export default function App() {
   return (
     <View style={{flex:1}}>
-      {/* <DefineStyle/> */}/
+      {/* <DefineStyle/> */}
       {/* <RandomUsersScreen/> */}
       {/* <FlatList_Example1/> */}
-      <FlatList_HeaderFooter/>
+      {/* <FlatList_HeaderFooter/> */}
+      {/* <FlastListAPI/> */}
+      <News/>
     </View>
   );
 }
