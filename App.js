@@ -1,45 +1,44 @@
-import { Text, View, Button } from "react-native";
-import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-
-function HomeScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>HomeScreen</Text>
-
-      <Button
-        title="Go to Detail"
-        onPress={() => navigation.navigate("Details")}
-      />
-    </View>
-  );
-}
-
-function DetailsScreen() {
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Detail Screen</Text>
-    </View>
-  );
-}
+import { View, Text} from 'react-native'
+import React from 'react'
+import { NavigationContainer } from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import FirstPage from './components/pages/FirstPage'
+import SecondPage from './components/pages/SecondPage'
+import ThirdPage from './components/pages/ThirdPage'
 
 const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen
-          name="Home"
-          component={HomeScreen}
-          options={{ title: "Overview" }}
-        />
-
-        <Stack.Screen name="Details" component={DetailsScreen} />
+      <Stack.Navigator 
+        initialRouteName='First'
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: '#1e90ff'
+          },
+          headerTintColor: '#ffff',
+          headerTitleStyle: {
+            fontWeight:'bold'
+          }
+        }}
+      >
+          <Stack.Screen 
+            name='First' 
+            component={FirstPage} 
+            options={{title: 'FirstPage'}}
+          />
+          <Stack.Screen 
+            name='Second' 
+            component={SecondPage}
+            options={{title: 'SecondPage'}}
+          />
+          <Stack.Screen 
+            name='Third' 
+            component={ThirdPage} 
+            options={{title: 'ThirdPage'}}
+          />
       </Stack.Navigator>
     </NavigationContainer>
-  );
-};
-
-export default App;
+  )
+      }
