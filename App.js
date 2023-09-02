@@ -1,31 +1,45 @@
-import { StyleSheet, Text, View } from "react-native";
-// import Recap from "./components/Recap";
+import { Text, View, Button } from "react-native";
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import FlastListAPI from "./components/FlastListAPI";
-import News from "./components/News";
-import ProductScreen from "./components/ProductScreen";
-
-
-export default function App() {
+function HomeScreen({ navigation }) {
   return (
-    <View style={{flex:1}}>
-      {/* <DefineStyle/> */}
-      {/* <RandomUsersScreen/> */}
-      {/* <FlatList_Example1/> */}
-      {/* <FlatList_HeaderFooter/> */}
-      {/* <FlastListAPI/> */}
-      {/* <News/> */}
-      <ProductScreen/>
+    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <Text>HomeScreen</Text>
+
+      <Button
+        title="Go to Detail"
+        onPress={() => navigation.navigate("Details")}
+      />
     </View>
   );
 }
 
+function DetailsScreen() {
+  return (
+    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <Text>Detail Screen</Text>
+    </View>
+  );
+}
 
+const Stack = createNativeStackNavigator();
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-});
+const App = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{ title: "Overview" }}
+        />
+
+        <Stack.Screen name="Details" component={DetailsScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+
+export default App;
