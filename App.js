@@ -1,54 +1,42 @@
-import { StyleSheet, Text, View } from "react-native";
+import { View, Text, Button } from "react-native";
 import React from "react";
-import { NavigationContainer } from '@react-navigation/native'
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import FirstPage from "./pages/FirstPage";
-import SecondPage from "./pages/SecondPage";
-import ThirdPage from "./pages/ThirdPage";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import HomeScreen from "./screens/HomeScreen";
+import DetailsScreen from "./screens/DetailsScreen";
 
 const Stack = createNativeStackNavigator();
+
+// function HomeScreen({ navigation }) {
+//   return (
+//     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+//       <Text>Home Screen</Text>
+//       <Button title="Go to Details" onPress={() => navigation.navigate('Detail')} />
+//     </View>
+//   );
+// }
+
+// function DetailsScreen() {
+//   return (
+//     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+//       <Text>Detail Screen</Text>
+//     </View>
+//   );
+// }
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator 
-       initialRouteName='First'
-       screenOptions={{
-        headerStyle: {
-          backgroundColor: '#1e90ff'
-        },
-        headerTintColor: '#ffff',
-        headerTitleStyle: {
-          fontWeight: 'bold',
-        }
-       }}
-      >
-        <Stack.Screen 
-        name='FirstPage' 
-        component={FirstPage} />
+      <Stack.Navigator initialRouteName="Home">
         <Stack.Screen
-        name='SecondPage'
-        component={SecondPage}/>
-        <Stack.Screen
-        name='ThirdPage'
-        component={ThirdPage}/>
+          name="Home"
+          component={HomeScreen}
+          options={{ title: "Overview" }}
+        />
+        <Stack.Screen name="Detail" component={DetailsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
-  )
-}
+  );
+};
 
 export default App;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 16,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  textStyle: {
-    fontSize: 25,
-    textAlign: "center",
-    marginBottom: 16,
-  },
-});
