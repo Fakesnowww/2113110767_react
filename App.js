@@ -1,54 +1,39 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { NavigationContainer } from '@react-navigation/native'
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import FirstPage from "./pages/FirstPage";
-import SecondPage from "./pages/SecondPage";
-import ThirdPage from "./pages/ThirdPage";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import IndexScreen from "./screens/IndexScreen";
+import CreatePostScreen from "./screens/CreatePostScreen";
 
 const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator 
-       initialRouteName='First'
-       screenOptions={{
-        headerStyle: {
-          backgroundColor: '#1e90ff'
-        },
-        headerTintColor: '#ffff',
-        headerTitleStyle: {
-          fontWeight: 'bold',
-        }
-       }}
+      <Stack.Navigator
+        mode="model"
+        screenOptions={{
+          headerStyle: { backgroundColor: "#008b8b" },
+
+          headerTintColor: "#ffff",
+
+          headerTitleStyle: {
+            fontWeight: "bold",
+          },
+        }}
       >
-        <Stack.Screen 
-        name='FirstPage' 
-        component={FirstPage} />
         <Stack.Screen
-        name='SecondPage'
-        component={SecondPage}/>
-        <Stack.Screen
-        name='ThirdPage'
-        component={ThirdPage}/>
+          name="Index"
+          component={IndexScreen}
+          options={{ title: "MainPage" }}
+        />
+
+        <Stack.Screen name="CreatePost" component={CreatePostScreen} />
       </Stack.Navigator>
     </NavigationContainer>
-  )
-}
+  );
+};
 
 export default App;
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 16,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  textStyle: {
-    fontSize: 25,
-    textAlign: "center",
-    marginBottom: 16,
-  },
-});
+const styles = StyleSheet.create({});
