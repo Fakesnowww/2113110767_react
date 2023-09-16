@@ -8,7 +8,7 @@ function FirstPage({ navigation }) {
         This is the First Page of the app{"\n"}</Text>
       <Button
         title="Go to Second Page"
-        onPress={() => navigation.navigate("SecondPage")}
+        onPress={() => navigation.navigate("SecondDrawer")}
       />
     </View>
   );

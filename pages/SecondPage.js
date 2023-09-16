@@ -8,7 +8,7 @@ function SecondPage({ navigation }) {
       <Button title="Go Back" onPress={() => navigation.goBack()} />
       <Button
         title="Go to Second Page...Again"
-        onPress={() => navigation.push("SecondPage")}
+        onPress={() => navigation.push("Secondpage")}
       />
       <Button
         title="Go to First Page"
